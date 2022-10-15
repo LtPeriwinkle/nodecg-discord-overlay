@@ -77,7 +77,7 @@ module.exports = function (nodecg) {
 			}
 		} else if (connection !== undefined && oldMember.channelID !== null) {
 			stopRecording();
-			if (newMember.channelID !== null && newMember.channelId !== channel.id) {
+			if (newMember.channelId !== null && newMember.channelId !== channel.id) {
 				// i'm too stupid to figure out how to do this properly so here we are
 				client.channels.fetch(newMember.channelId).then(c => channel = c);
 				setTimeout(function () {
