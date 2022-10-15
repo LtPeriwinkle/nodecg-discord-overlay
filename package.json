@@ -17,9 +17,12 @@
     ]
   },
   "dependencies": {
+    "@discordjs/opus": "^0.8.0",
+    "@discordjs/voice": "^0.13.0",
     "@polymer/paper-button": "^3.0.1",
     "@polymer/paper-slider": "^3.0.1",
     "@polymer/polymer": "^3.4.1",
-    "discord.js": "^12.5.3"
+    "discord.js": "^14.6.0",
+    "sodium-native": "^3.4.1"
   }
 }
