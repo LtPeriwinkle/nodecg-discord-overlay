@@ -75,7 +75,7 @@ module.exports = function (nodecg) {
 					}
 				}
 			}
-		} else if (connection !== undefined && oldMember.channelID !== null) {
+		} else if (connection !== undefined && oldMember.channelId !== null) {
 			stopRecording();
 			if (newMember.channelId !== null && newMember.channelId !== channel.id) {
 				// i'm too stupid to figure out how to do this properly so here we are
