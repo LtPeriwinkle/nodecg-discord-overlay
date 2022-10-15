@@ -135,7 +135,7 @@ module.exports = function (nodecg) {
 			}
 		})
 
-		nodecg.log.info('Capture started for channel ' + connection.channel.name + ' on ' + Date());
+		nodecg.log.info('Capture started for channel ' + channel.name + ' on ' + Date());
 	}
 
 	function stopRecording() {
