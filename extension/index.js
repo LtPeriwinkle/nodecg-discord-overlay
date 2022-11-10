@@ -43,7 +43,7 @@ module.exports = function (nodecg) {
 
 	client.on('voiceStateUpdate', (oldMember, newMember) => {
 		if (connection !== undefined && newMember.id !== client.user.id) {
-			if (oldMember.channelID !== channel.id && newMember.channelID === channel.id) {
+			if (oldMember.channelId !== channel.id && newMember.channelId === channel.id) {
 				let muteState;
 				if (newMember.selfMute || newMember.selfDeaf || newMember.serverMute || newMember.serverDeaf)
 					muteState = true;
@@ -52,7 +52,7 @@ module.exports = function (nodecg) {
 				addMember.value = null;
 				addMember.value = { id: newMember.id, name: newMember.member.user.username, avatar: newMember.member.user.displayAvatarURL(), muted: muteState };
 				memberList.value.push({ id: newMember.id, name: newMember.member.user.username, avatar: newMember.member.user.displayAvatarURL(), muted: muteState });
-			} else if (oldMember.channelID === channel.id && newMember.channelID !== channel.id) {
+			} else if (oldMember.channelId === channel.id && newMember.channelId !== channel.id) {
 				for (let i = 0; i < memberList.value.length; i++) {
 					if (memberList.value[i].id === newMember.id) {
 						memberList.value.splice(i, 1)
